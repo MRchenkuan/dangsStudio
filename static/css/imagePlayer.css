@@ -1,0 +1,13 @@
+#imagePlayer{height:100%;width: 71.3rem;margin: 0 auto;position: relative;}
+#imageFrame{height: 24.3rem;width:50.6rem;margin: 2.7rem auto 0;box-shadow: 2px 2px 9px 0 #424141 }
+#imageFrame{position: relative;overflow: hidden}
+#imageFrame .pice{width: 100%;height: 100%;position: absolute}
+#imageFrameCtrl{width: 6rem;padding: 0;margin: .8rem auto 0;overflow: hidden}
+#imageFrameCtrl li{float: left; list-style: none;width: 16.6%;text-align: center;line-height: 1.6rem;}
+#imageFrameCtrl li span{width: .5rem;height: .5rem;background: #4d4d4d;border-radius: .5rem;display: block;transition:all .3s ease}
+#imageFrameCtrl li:hover span{;background: #fff ;  cursor: pointer;}
+#imageFrameCtrl .active span{background: #fff }
+#switchPrv,#switchNxt{transition:all .3s ease;position: absolute;top:14rem;width: 2rem;height:2rem;background-size:cover;border-radius: 1rem;}
+#switchPrv:hover,#switchNxt:hover{box-shadow: 0 0 15px #202020;cursor: pointer;}
+#switchNxt{background-image: url("../img/ui/l.png");right: 5rem}
+#switchPrv{background-image: url("../img/ui/r.png");left: 5rem}

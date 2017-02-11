@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>当记</title>
+    <link href="static/css/imagePlayer.css" rel="stylesheet">
+    <script src="static/js/jq.js"></script>
 </head>
 <style>
-    div{border: 1px dashed grey}
+    div{border: 1px dashed grey;}
     body{padding: 0;margin: 0}
     #head{height: 9.4rem;margin: 1.6rem auto 1.5rem;}
     #logoIcon{height: 100%;width: 7rem;float:left}
-    #nav-frame{height:100%;width: 42rem;float:left;margin: 0 3rem;}
-    #nav-title{height: 4.7rem;width: 42rem;font-size: 1.4rem;line-height: 4.7rem;}
+    #nav-frame{height:100%;width: 42rem;float:left;margin:0 auto 0 4.3rem;}
+    #nav-title{height: 4.7rem;width: 42rem;font-size: 1.4rem;line-height: 4.7rem;border-bottom: 2px #cccccc solid}
     #nav-list{height: 4.7rem;width: 42rem;padding: 0;margin: 0;line-height: 4.7rem;}
-    #nav-list li{float: left;text-align: center;width: 11%;list-style: none;font-size: .9rem;color: #bbbbbb;cursor: pointer}
+    #nav-list li{float: left;text-align: center;margin-left:1.6rem;list-style: none;font-size: .83rem;color: #bbbbbb;cursor: pointer}
+    #nav-list li:nth-child(1){margin-left:0}
     #nav-list li:hover{color:#202020;transition: all .5s ease}
     #nav-list .active{color:#202020}
     #contact-frame{height:100%;width: 17.4rem;float:left}
-    #mid{height: 29.7rem;background: #75737e;width: 100%}
-    #imagePlayer{height:100%;width: 71.3rem;margin: 0 auto;}
-    #foot{margin: 0 auto}
+    #mid{height: 29.7rem;background: #75737e;width: 100%;overflow: hidden}
+    #foot{height: 3.3rem;margin: 0 auto}
+    #head,#foot{width: 73.1rem;overflow: hidden}
 
-
-    #head,#foot{width: 73.1rem;}
-    #test{width: 75%;height: 90%;box-shadow: 2px 2px 9px 0px #424141}
 </style>
 <body>
     <div id="head">
@@ -51,9 +51,49 @@
     </div>
     <div id="mid">
         <div id="imagePlayer">
-            <div id="test"></div>
+            <div id="imageFrame">
+                <img class="pice" src="static/img/resource/face.png">
+                <img class="pice" src="static/img/resource/face.png">
+                <img class="pice" src="static/img/resource/face.png">
+                <img class="pice" src="static/img/resource/face.png">
+                <img class="pice" src="static/img/resource/face.png">
+                <img class="pice" src="static/img/resource/face.png">
+            </div>
+            <ul id="imageFrameCtrl">
+                <li class="active"><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+            </ul>
+            <span id="switchPrv"></span>
+            <span id="switchNxt"></span>
         </div>
     </div>
     <div id="foot"></div>
 </body>
+<script>
+    var pices = document.querySelectorAll("#imageFrame .pice")
+    var $imageFrame = $("#imageFrame");
+    var $imageFrameCtrl = $("#imageFrameCtrl");
+    Array.prototype.some.call(pices,function (it,id) {
+        it.style.left = id * $imageFrame.width()+"px";
+    });
+    var index = 0;
+    var width = $imageFrame.width();
+    setInterval(function () {
+        // control
+        $imageFrameCtrl.find("li").removeClass("active").eq(index).addClass("active")
+        // 图片
+        $imageFrame.animate({
+            scrollLeft:width*index++
+        },500,'swing');
+
+        // 复原
+        if(index>=pices.length){
+            index = 0 ;
+        }
+    },2000)
+</script>
 </html>
