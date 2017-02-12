@@ -11,3 +11,18 @@
 #switchPrv:hover,#switchNxt:hover{box-shadow: 0 0 15px #202020;cursor: pointer;}
 #switchNxt{background-image: url("../img/ui/l.png");right: 5rem}
 #switchPrv{background-image: url("../img/ui/r.png");left: 5rem}
+.col-4{float: left;width: 25%;box-sizing: border-box;height: 3.3rem;}
+.col-4 .raw-2{padding:0;margin:0;float: left;width: 100%;box-sizing: border-box;height: 1.6rem;font-size: .9rem;line-height: 1.6rem}
+.col-4{padding: 0 4.1rem;}
+.col-4:nth-child(1){padding-left: 0;border-right: 1px solid #202020}
+.col-4:nth-child(2){padding-left: 0;border-right: 1px solid #202020}
+.col-4:nth-child(3){padding-right: 0}
+.col-4:nth-child(4){padding-right: .1rem;padding-left: 6.6rem;line-height: 3.3rem}
+#btn-baoming{width: 100%;
+    line-height: 2.3rem;
+    height: 2.3rem;
+    display: block;
+    text-align: center;
+    border: 1px solid #202020;
+    margin-top: .3rem;
+    border-radius: 5px;}
