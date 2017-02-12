@@ -30,7 +30,7 @@
     margin-top: .3rem;
     border-radius: 5px;
     letter-spacing: .3rem;
-    transition: all .5s ease;
+    transition: all .3s ease;
 }
 #btn-baoming:hover{
     color:#fff;

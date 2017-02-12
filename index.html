@@ -24,13 +24,64 @@
     #mid{height: 29.7rem;background: #75737e;width: 100%;overflow: hidden}
     #foot{height: 3.3rem;margin: 3rem auto}
     #head,#foot{width: 73.1rem;overflow: hidden}
-o
+    #contact-list{
+        border: 1px solid #000;
+        width: 14.4rem;
+        height: 7.7rem;
+        padding: 0;
+        float: right;
+        border-radius: .5rem;
+        margin: 0;
+        position: relative;
+    }
+    #leftAvt{position: absolute;top: 1rem;left: -2rem}
+    #leftAvt:after{content: '<'}
+    #contact-list li{padding-left: 1rem;list-style: none;height: 2.5rem;line-height: 2.5rem}
+    #contact-list .text:hover{text-decoration: underline;cursor: pointer}
+    #link-group{float: right;}
+    #link-group li{
+        list-style: none;
+        float: left;
+        height: 1.6rem;
+        width: 1.8rem;
+        margin: 0 .5rem;
+        background-size: contain;
+        background: no-repeat center;
+    }
+    #link-group li:hover{
+        cursor: pointer;
+    }
+    #link-qq{background-image: url("./static/img/ui/qq_s.svg")!important;}
+    #link-wechat{background-image: url("./static/img/ui/wechat_s.svg")!important;}
+    #link-weibo{background-image: url("./static/img/ui/sina_weibo_s.svg")!important;}
+    #link-qrcode{}
+    .qqtag{        display: inline-block;
+        margin-right: .8rem;
+        width: 1.4rem;height:1.4rem;position: relative;vertical-align: text-bottom}
+    .qqtag:after{
+        content: ' ';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url('./static/img/ui/qq_s.svg')no-repeat center;
+        background-size: contain;
+    }
 </style>
 <body>
     <div id="head">
         <img id="logoIcon" src="./static/img/ui/logo.png">
         <div id="nav-frame">
-            <div id="nav-title">《爸爸去哪4》官方唯一合作造型机构</div>
+            <div id="nav-title">
+                <span>《爸爸去哪4》官方唯一合作造型机构</span>
+                <ul id="link-group">
+                    <li id="link-wechat"></li>
+                    <li id="link-qq"></li>
+                    <li id="link-weibo"></li>
+                    <li id="link-qrcode"></li>
+                </ul>
+            </div>
             <ul id="nav-list">
                 <li class="active">首页</li>
                 <li>工作室简介</li>
@@ -45,9 +96,9 @@ o
         </div>
         <div id="contact-frame">
             <ul id="contact-list">
-                <li>客服造型1号</li>
-                <li>客服造型2号</li>
-                <li>客服造型3号</li>
+                <li><span class="qqtag"></span><span class="text">客服造型1号 小明</span></li>
+                <li><span class="qqtag"></span><span class="text">客服造型2号 小明</span></li>
+                <li><span class="qqtag"></span><span class="text">客服造型3号 小明</span></li>
             </ul>
         </div>
     </div>
