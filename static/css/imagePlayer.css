@@ -19,11 +19,12 @@
 .col-4:nth-child(2){padding-left: 0;}
 .col-4:nth-child(3){padding: 0 4rem 0 0;}
 .col-4:nth-child(3) .raw-2{  border:none;}
-.col-4:nth-child(4){padding-right: .1rem;padding-left: 3rem;line-height: 3.3rem}
+.col-4:nth-child(4){padding-right: .3rem;padding-left: 3rem;line-height: 3.3rem}
 #btn-baoming{width: 100%;
     line-height: 2.3rem;
     height: 2.3rem;
     display: block;
+    font-size: 1.3rem;
     text-align: center;
     border: 1px solid #202020;
     margin-top: .3rem;
@@ -35,5 +36,6 @@
     color:#fff;
     background: #202020;
     cursor: pointer;
+    box-shadow: 0 0 5px 0 #000;
 
 }
