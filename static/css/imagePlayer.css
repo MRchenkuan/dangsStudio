@@ -3,7 +3,7 @@
 #imageFrame{position: relative;overflow: hidden}
 #imageFrame .pice{width: 100%;height: 100%;position: absolute}
 #imageFrameCtrl{width: 6rem;padding: 0;margin: .8rem auto 0;overflow: hidden}
-#imageFrameCtrl li{float: left; list-style: none;width: 16.6%;text-align: center;line-height: 1.6rem;}
+#imageFrameCtrl li{float: left; list-style: none;width: 14.28%;text-align: center;line-height: 1.6rem;}
 #imageFrameCtrl li span{width: .5rem;height: .5rem;background: #4d4d4d;border-radius: .5rem;display: block;transition:all .3s ease}
 #imageFrameCtrl li:hover span{;background: #fff ;  cursor: pointer;}
 #imageFrameCtrl .active span{background: #fff }
