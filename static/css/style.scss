@@ -1,0 +1,201 @@
+@import "base.css";
+@import "font.css";
+@import "../iconfonts/iconfont.css";
+html{
+  font-family: "Microsoft YaHei","Helvetica Neue", "Helvetica", "Arial", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-size:12px;
+}
+div,nav,li{
+  //border: 1px dashed grey;
+  box-sizing: border-box;
+}
+body{
+  padding: 0;margin: 0;
+  overflow-x: hidden;
+}
+
+#head{
+  height: 11.5rem;
+  position: relative;
+  @keyframes wave-left {
+    0%{transform: rotate(-1deg);}
+    50%{transform: rotate(6deg);}
+    100%{transform: rotate(-1deg);}
+  }
+  @keyframes wave-right {
+    0%{transform: rotate(1deg);}
+    50%{transform: rotate(-6deg);}
+    100%{transform: rotate(1deg);}
+  }
+  #leafTopLeft{
+    left: 0;
+    animation:wave-left 3s infinite ease-in-out;
+    transform-origin: top left;
+  }
+  #leafTopRight{
+    right: 0;
+    transform-origin: top right;
+    animation:wave-right 4s infinite ease-in-out ;
+  }
+  .leaf{
+    position: absolute;top: 0;
+    height:5.7rem;
+  }
+  #slogan{
+    height: 8.8rem;
+    width: 84rem;
+    margin: 0 auto;
+    padding-left: 17.3rem;
+    position: relative;
+    p{
+      line-height: 2rem;
+      font-size: 1.2rem;
+      color: #666;
+    }
+    #logo{
+      width: 14rem;
+      left: 0;
+      top: .5rem;
+      position: absolute;
+      z-index: 9;
+    }
+    .left{
+      padding: 1.5rem 0;
+      height: 8.8rem;
+      .sorry{
+        font-size: 1.5rem;
+        font-family: -webkit-pictograph;
+        font-weight: 900;
+        color:#000;
+        font-style: italic;
+      }
+      float: left;
+      p{
+        line-height: 2rem;
+      }
+    }
+    .right{
+      float: right;
+      height: 100%;
+      padding: 3rem 0;
+      .pink-phone{
+        color: #fd5b89;
+        font-family: "big_noodle_titling";
+        font-size: 2rem;
+        margin-right: 1.5rem;
+      }
+        .icon{
+          font-size:2rem;
+          color: #a9a6a6;
+          transition:all .5s ease;
+          margin-left: 1.2rem;
+          &:hover{
+            color: #fd5b89;
+          }
+          &:nth-child(1){
+            font-size:1.5rem;
+          }
+      }
+    }
+  }
+  nav{
+    height: 3.1rem;
+    width: 100%;
+    background-color: #f9f9f9;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #ccc;
+    #navFrame{
+      height: 3.1rem;
+      width: 84rem;
+      margin: 0 auto;
+      padding-left: 17.3rem;
+      #navList{
+        height: 3.1rem;
+        $menuCount:8;
+          li{
+            width: 1/$menuCount * 100%;
+            float: left;
+            line-height: 3.1rem;
+            @for $i from 0 through $menuCount{
+              @if $i<($menuCount/2){
+                &:nth-child(#{$i+1}){
+                  padding-left: $i*.5%;
+                  text-align: left;
+                }
+              }
+
+              @if $i>=($menuCount/2){
+                &:nth-child(#{$i+1}){
+                  padding-right: ($menuCount - $i - 1)*1%;
+                  text-align: right;
+                }
+              }
+
+            }
+            a{
+              color: #7e7e7e;
+              &:hover,&.active{
+                color: #e53d61;
+                text-shadow: 0 0 20px #e53d61;
+              }
+              transition:all .5s ease;
+              cursor: pointer;
+              display: inline-block;
+              height: 100%;
+            }
+          }
+      }
+    }
+
+  }
+}
+#neck{
+  height: 41.5rem;
+}
+#body{
+  height: 31rem;
+  background-color: #fdf2f2;
+  .imgFrame{
+    height: 100%;
+    width: 84rem;
+    margin: 0 auto;
+    padding: 5.1rem 0 4.4rem 0;
+    border: 1px solid grey;
+  }
+}
+#foot{
+  height: 19.2rem;
+  background-color: #4b4b57;
+  position: relative;
+  @keyframes wave-left {
+    0%{transform: rotate(-1deg);}
+    50%{transform: rotate(3deg);}
+    100%{transform: rotate(-1deg);}
+  }
+  @keyframes wave-right {
+    0%{transform: rotate(1deg);}
+    50%{transform: rotate(-3deg);}
+    100%{transform: rotate(1deg);}
+  }
+  #leafBottomLeft{
+    left: 0;
+    animation:wave-left 4s infinite ease-in-out;
+    transform-origin: 20% 20%;
+    height:7.4rem;
+
+  }
+  #leafBottomRight{
+    right: 0;
+    transform-origin: 80% 20%;
+    animation:wave-right 3s infinite ease-in-out ;
+    height:8.4rem;
+  }
+  .leaf{
+    position: absolute;top: -3rem;
+  }
+}
+#tail{
+  height: 3.7rem;
+  background-color: #1f2634;
+}

@@ -3,170 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>当记</title>
+    <link href="static/css/style.css" rel="stylesheet">
     <link href="static/css/imagePlayer.css" rel="stylesheet">
     <script src="static/js/jq.js"></script>
 </head>
-<style>
-    html{font-family: "Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif}
-    /*div{border: 1px dashed grey;}*/
-    body{padding: 0;margin: 0;
-        overflow-x: hidden;}
-    #head{height: 9.4rem;margin: 1.6rem auto 1.5rem;}
-    #logoIcon{height: 100%;width: 7rem;float:left}
-    #nav-frame{height:100%;width: 42rem;float:left;margin:0 auto 0 4.3rem;}
-    #nav-title{height: 4.7rem;width: 42rem;font-size: 1.4rem;line-height: 4.7rem;border-bottom: 2px #cccccc solid}
-    #nav-list{height: 4.7rem;width: 42rem;padding: 0;margin: 0;line-height: 4.7rem;}
-    #nav-list li{float: left;text-align: center;margin-left:1.6rem;list-style: none;font-size: .83rem;color: #777;cursor: pointer}
-    #nav-list li:nth-child(1){margin-left:0}
-    #nav-list li:hover{color:#202020;transition: all .5s ease}
-    #nav-list .active{color:#202020}
-    #mid{height: 29.7rem;background: #75737e;width: 100%;overflow: hidden}
-    #foot{height: 3.3rem;margin: 3rem auto}
-    #head,#foot{width: 73.1rem;overflow: hidden}
-    
-    #contact-frame{
-        transition: all .5s ease;
-        left:-2rem;
-        opacity: 0;
-        position: relative;
-        height:100%;
-        width: 17.4rem;
-        float:right;  }
-    #contact-frame-bg{
-        width: 1.6rem;
-        top: 1.5rem;
-        left: 1.7rem;
-        z-index: 1;
-        height: 1.6rem;
-        background-color: #fff!important;
-        background: url(./static/img/ui/leftqt.svg) no-repeat center;
-        background-size: contain!important;
-        position: absolute;
-    }
-    #contact-list{
-        width: 14.4rem;
-        height: 7.7rem;
-        padding: 0;
-        float: right;
-        border-radius: .5rem;
-        margin: 0;
-        position: relative;
-        border:1px solid #666;
-
-    }
-    #contact-list li{padding-left: 1rem;list-style: none;height: 2.5rem;line-height: 2.5rem}
-    #contact-list .text:hover{text-decoration: underline;cursor: pointer}
-    #link-group{float: right;}
-    #link-group li{
-        list-style: none;
-        float: left;
-        height: 1.6rem;
-        width: 1.8rem;
-        margin: 0 .5rem;
-        background-size: contain;
-        background: no-repeat center;
-    }
-    #link-group li:hover{
-        cursor: pointer;
-    }
-    #link-qq{background-image: url("./static/img/ui/qq_s.svg")!important;}
-    #link-wechat{background-image: url("./static/img/ui/wechat_s.svg")!important;}
-    #link-weibo{background-image: url("./static/img/ui/sina_weibo_s.svg")!important;}
-    #link-qrcode{background-image: url("./static/img/ui/qrcode.svg")!important;}
-    .qqtag{
-        display: inline-block;
-        margin-right: .8rem;
-        width: 1.4rem;height:1.4rem;position: relative;vertical-align: text-bottom}
-    .qqtag:after{
-        content: ' ';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: url('./static/img/ui/qq_s.svg')no-repeat center;
-        background-size: contain;
-    }
-</style>
 <body>
     <div id="head">
-        <img id="logoIcon" src="./static/img/ui/logo.svg">
-        <div id="nav-frame">
-            <div id="nav-title">
-                <span>《爸爸去哪4》官方唯一合作造型机构</span>
-                <ul id="link-group">
-                    <li id="link-wechat"></li>
-                    <li id="link-qq"></li>
-                    <li id="link-weibo"></li>
-                    <li id="link-qrcode" style="background-size: contain"></li>
+        <img id="leafTopLeft" class="leaf" draggable="false" src="./static/img/ui/leafTopLeft.png">
+        <img id="leafTopRight" class="leaf" draggable="false" src="./static/img/ui/leafTopRight.png">
+        <div id="slogan">
+            <img id="logo" src="./static/img/ui/logo.png">
+            <div class="left">
+                <p class="sorry">Sorry!</p>
+                <p>对不起！我们不是流水线培训</p>
+                <p>我们只专注于小班制教育</p>
+            </div>
+            <div class="right">
+                <span>报名电话</span>
+                <p><span class="pink-phone">0731-88925003</span>
+                    <span class="icon iconfont icon-phono" style="font-size: 1.5rem"></span>
+                    <span class="icon iconfont icon-wechat"></span>
+                    <span class="icon iconfont icon-qq" style="font-size: 1.5rem"></span>
+                    <span class="icon iconfont icon-weibo"></span>
+                </p>
+            </div>
+        </div>
+        <nav>
+            <div id="navFrame">
+                <ul id="navList">
+                    <li><a class="active">首页</a></li>
+                    <li><a>ABOUT</a></li>
+                    <li><a>MAKEUP</a></li>
+                    <li><a>MANICURE</a></li>
+                    <li><a>WORKS</a></li>
+                    <li><a>TEACHER</a></li>
+                    <li><a>STARS</a></li>
+                    <li><a>CONTACT</a></li>
                 </ul>
             </div>
-            <ul id="nav-list">
-                <li class="active">首页</li>
-                <li>工作室简介</li>
-                <li>化妆课程</li>
-                <li>美甲课程</li>
-                <li>学院作品</li>
-                <li>师资力量</li>
-                <li>合作明星</li>
-                <li>联系我们</li>
-                <li>新闻资讯</li>
-            </ul>
-        </div>
-        <div id="contact-frame">
-            <div id="contact-frame-bg"></div>
-            <ul id="contact-list">
-                <li><span class="qqtag"></span><span class="text">客服造型1号 小明</span></li>
-                <li><span class="qqtag"></span><span class="text">客服造型2号 小明</span></li>
-                <li><span class="qqtag"></span><span class="text">客服造型3号 小明</span></li>
-            </ul>
-        </div>
+        </nav>
     </div>
-    <div id="mid">
+    <div id="neck">
         <div id="imagePlayer">
             <div id="imageFrame">
-                <img class="pice" src="static/img/resource/1.jpg">
-                <img class="pice" src="static/img/resource/2.png">
-                <img class="pice" src="static/img/resource/3.png">
-                <img class="pice" src="static/img/resource/4.png">
-                <img class="pice" src="static/img/resource/5.png">
-                <img class="pice" src="static/img/resource/6.png">
-                <img class="pice" src="static/img/resource/7.png">
+                <img class="pice" src="static/img/resource/pice1.png">
+                <img class="pice" src="static/img/resource/pice1.png">
+                <img class="pice" src="static/img/resource/pice1.png">
+                <img class="pice" src="static/img/resource/pice1.png">
             </div>
-            <ul id="imageFrameCtrl">
-                <li class="active"><span></span></li>
-                <li><span></span></li>
-                <li><span></span></li>
-                <li><span></span></li>
-                <li><span></span></li>
-                <li><span></span></li>
-                <li><span></span></li>
-            </ul>
+
             <span id="switchPrv"></span>
             <span id="switchNxt"></span>
         </div>
     </div>
-    <div id="foot">
-        <div class="col-4 text-center">
-            <p class="raw-2">联系电话：073188925003</p>
-            <p class="raw-2">客服微信号：dangjizaoxing</p>
-        </div>
-        <div class="col-4 text-center">
-            <p class="raw-2">微信公众号：当记造型</p>
-            <p class="raw-2">新浪微博号：@当记造型</p>
-        </div>
-        <div class="col-4">
-            <p class="raw-2">长沙市芙蓉区芙蓉中路2段98号明城国际中心6187-619室</p>
-        </div>
-        <div class="col-4">
-            <a id="btn-baoming">课程报名通道</a>
+    <div id="body">
+        <div class="imgFrame">
+
         </div>
     </div>
+    <div id="foot">
+        <img id="leafBottomLeft" class="leaf" draggable="false" src="./static/img/ui/leafBottomLeft.png">
+        <img id="leafBottomRight" class="leaf" draggable="false" src="./static/img/ui/leafBottomRight.png">
+    </div>
+    <div id="tail"></div>
 </body>
 <script>
     var pices = document.querySelectorAll("#imageFrame .pice")
     var $imageFrame = $("#imageFrame");
-    var $imageFrameCtrl = $("#imageFrameCtrl");
+//    var $imageFrameCtrl = $("#imageFrameCtrl");
     var $contactFrame = $("#contact-frame");
     var $body = $("body");
     Array.prototype.some.call(pices,function (it,id) {
@@ -176,17 +80,17 @@
     var width = $imageFrame.width();
     setInterval(function () {
         // control
-        $imageFrameCtrl.find("li").removeClass("active").eq(index).addClass("active")
+//        $imageFrameCtrl.find("li").removeClass("active").eq(index).addClass("active")
         // 图片
         $imageFrame.animate({
             scrollLeft:width*index++
-        },500,'swing');
+        },1000,'swing');
 
         // 复原
         if(index>=pices.length){
             index = 0 ;
         }
-    },2000);
+    },5000);
     $body.delegate("#link-qq","mouseenter",function (e) {
         e.stopPropagation();
         $contactFrame.css({

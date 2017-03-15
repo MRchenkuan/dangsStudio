@@ -1,5 +1,5 @@
-#imagePlayer{width: 71.3rem;margin: 0 auto;position: relative;    overflow: hidden;}
-#imageFrame{height: 24.3rem;width:50.6rem;margin: 2.7rem auto 0;box-shadow: 2px 2px 9px 0 #424141 }
+#imagePlayer{height: 100%;width: 100%;margin: 0 auto;position: relative;    overflow: hidden;}
+#imageFrame{height: 100%;width:100%;}
 #imageFrame{position: relative;overflow: hidden}
 #imageFrame .pice{width: 100%;height: 100%;position: absolute}
 #imageFrameCtrl{width: 6rem;padding: 0;margin: .8rem auto 0;overflow: hidden}
