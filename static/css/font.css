@@ -4,3 +4,13 @@
     src: url('../fonts/big_noodle_titling.ttf'),
     url('../fonts/big_noodle_titling.ttf'); /* IE9 */
 }
+
+/*声明 WebFont*/
+@font-face {
+    font-family: 'sorry';
+    src: url('../fonts/Baskerville-Italic.ttf');
+    src: url('../fonts/Baskerville-Italic.ttf?#font-spider') format('embedded-opentype');
+    src: url('../fonts/Baskerville-Italic.ttf?#font-spider') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

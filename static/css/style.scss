@@ -63,11 +63,11 @@ body{
       padding: 1.5rem 0;
       height: 8.8rem;
       .sorry{
-        font-size: 1.5rem;
-        font-family: -webkit-pictograph;
-        font-weight: 900;
-        color:#000;
+        font-size: 2rem;
+        font-family: 'sorry';
+        color: #000;
         font-style: italic;
+        letter-spacing: .1rem;
       }
       float: left;
       p{
@@ -91,6 +91,7 @@ body{
           margin-left: 1.2rem;
           &:hover{
             color: #fd5b89;
+            cursor: pointer;
           }
           &:nth-child(1){
             font-size:1.5rem;
@@ -105,6 +106,7 @@ body{
     position: absolute;
     bottom: 0;
     border-top: 1px solid #ccc;
+    border-bottom: 1px solid #999;
     #navFrame{
       height: 3.1rem;
       width: 84rem;
@@ -154,18 +156,71 @@ body{
   height: 41.5rem;
 }
 #body{
-  height: 31rem;
+  height: 31.6rem;
   background-color: #fdf2f2;
+  @keyframes wave-mid {
+    0%{transform: scaleY(1) scaleX(1);}
+    50%{transform: scaleY(.95) scaleX(1.02);}
+    100%{transform: scaleY(1) scaleX(1);}
+  }
   .imgFrame{
     height: 100%;
     width: 84rem;
     margin: 0 auto;
-    padding: 5.1rem 0 4.4rem 0;
-    border: 1px solid grey;
+    padding: 5.1rem 0 2.6rem 0;
+    //border: 1px solid grey;
+    .headImgBox{
+      position:relative;
+      &:nth-child(1){left:-3rem}
+      &:nth-child(2){left:-1rem}
+      &:nth-child(3){right:-1rem}
+      &:nth-child(4){right:-3rem}
+      width: 25%;
+      height: 100%;
+      //border:1px solid grey;
+      box-sizing: border-box;
+      float: left;
+      &:hover .headImg{
+        transform: rotate3d(0,1,0,360deg);
+        transition: all 1s ease;
+      }
+      .headImg{
+        width: 15rem;
+        height: 15rem;
+        border-radius: 15rem;
+        margin: 0 auto;
+        background-size: cover;
+        position: relative;
+        .wrap{
+          position: absolute;
+          bottom: -1.9rem;
+          width: 104%;
+          left: -2.5%;
+          transform-origin: center 80%;
+          animation: wave-mid 4s infinite ease-in-out ;
+        }
+
+      }
+      p{
+        text-align: center;
+        font-size: 1.5rem;
+        color:#4b4b57;
+        &:nth-child(2){
+          font-size: 1.3rem;
+          padding:3rem 0 1rem;
+          line-height: 1.2;
+          height: 2.6rem;
+        }
+        &:nth-child(3){
+          font-size: 1.2rem;
+          font-style: italic;
+        }
+      }
+    }
   }
 }
 #foot{
-  height: 19.2rem;
+  height: 19.8rem;
   background-color: #4b4b57;
   position: relative;
   @keyframes wave-left {
@@ -194,8 +249,19 @@ body{
   .leaf{
     position: absolute;top: -3rem;
   }
+  .content{
+    width: 84rem;
+    border: 1px dashed #fff;
+    margin: 0 auto;
+    height:100%;
+  }
 }
 #tail{
   height: 3.7rem;
   background-color: #1f2634;
+  p{
+    line-height: 3.7rem;
+    text-align: center;
+    color: #fff;
+  }
 }
