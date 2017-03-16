@@ -60,14 +60,15 @@ body{
       z-index: 9;
     }
     .left{
-      padding: 1.5rem 0;
+      padding: 1.3rem 0;
       height: 8.8rem;
       .sorry{
-        font-size: 2rem;
+        font-size: 2.3rem;
         font-family: 'sorry';
         color: #000;
-        font-style: italic;
         letter-spacing: .1rem;
+        transform: scaleY(0.8);
+        line-height: 2.4rem;
       }
       float: left;
       p{
@@ -78,11 +79,15 @@ body{
       float: right;
       height: 100%;
       padding: 3rem 0;
+      &>span{
+        color:#999;
+      }
       .pink-phone{
         color: #fd5b89;
         font-family: "big_noodle_titling";
         font-size: 2rem;
         margin-right: 1.5rem;
+        letter-spacing: .1rem;
       }
         .icon{
           font-size:2rem;
@@ -251,9 +256,64 @@ body{
   }
   .content{
     width: 84rem;
-    border: 1px dashed #fff;
     margin: 0 auto;
     height:100%;
+    .one,.two{
+      color:#fff;
+      text-shadow: 0 1px #000;
+      width: 25%;
+      float: left;
+      margin: 6.4rem 3.8rem 0 0;
+      padding-right: 3.8rem;
+      border-right: 1px solid;
+      .pink-phone{
+        line-height: 3rem;
+        font-family: "big_noodle_titling";
+        font-size: 2.5rem;
+        margin-right: 1.5rem;
+        letter-spacing: .1rem;
+      }
+    }
+    .two{
+      width: auto;
+    }
+    .two p{
+      height: 2.1rem;
+      line-height: 2.1rem;
+    }
+    .three{
+      margin: 6.4rem 3.8rem 0 0;
+      float: left;
+      .qr{
+        width: 6.5rem;
+        float: left;
+        margin-right: 2.2rem;
+        &:nth-child(3){
+          margin-right: 0;
+        }
+        & img{
+          height: 6.5rem;
+        }
+        & p{
+          color: #fff;
+          text-align:center;
+          text-shadow: 0 1px #000;
+        }
+      }
+    }
+    .four{
+      margin: 3.8rem 0 0 0;
+      float: right;
+      width: 9.5rem;
+      img{
+        width: 100%;
+        cursor: pointer;
+      }
+      img:hover{
+        transition: .5s cubic-bezier(0.42, 0, 0.43, 4.26) all;
+        transform: scale(1.2);
+      }
+    }
   }
 }
 #tail{
@@ -263,5 +323,6 @@ body{
     line-height: 3.7rem;
     text-align: center;
     color: #fff;
+    text-shadow: 0 1px 1px #000;
   }
 }
