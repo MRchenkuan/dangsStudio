@@ -186,16 +186,17 @@ body{
       box-sizing: border-box;
       float: left;
       &:hover .headImg{
-        transform: rotate3d(0,1,0,360deg);
-        transition: all 1s ease;
+        box-shadow: 0 0 20px -3px #e53d61;
       }
       .headImg{
+
         width: 15rem;
         height: 15rem;
         border-radius: 15rem;
         margin: 0 auto;
         background-size: cover;
         position: relative;
+        transition: all 1s ease;
         .wrap{
           position: absolute;
           bottom: -1.9rem;
