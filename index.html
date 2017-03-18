@@ -20,26 +20,44 @@
                 <p>我们只专注于小班制教育</p>
             </div>
             <div class="right">
-                <span>报名电话</span>
-                <p><span class="pink-phone">0731-88925003</span>
-                    <span class="icon iconfont icon-phono" style="font-size: 1.5rem"></span>
-                    <span class="icon iconfont icon-wechat"></span>
-                    <span class="icon iconfont icon-qq" style="font-size: 1.5rem"></span>
-                    <span class="icon iconfont icon-weibo"></span>
-                </p>
+                <div class="phone-num">
+                    <span>报名电话</span>
+                    <p>0731-88925003</p>
+                </div>
+                <div id="msgPop-cs" class="msgPop">
+                    <p><span class="avt iconfont icon-qq"></span>当记造型客服</p>
+                    <p><span class="avt iconfont icon-qq"></span>当记造型客服</p>
+                    <p><span class="avt iconfont icon-qq"></span>当记造型客服</p>
+                </div>
+                <div id="msgPop-qr-weibo"  class="msgPop">
+                    <img src="./static/img/ui/qrcode/pub.png">
+                    <p>新浪微博号</p>
+                    <p><a target="_blank" href="http://weibo.com/dangjistudio">@当记造型</a></p>
+                </div>
+                <div id="msgPop-qr-pub" class="msgPop">
+                    <img src="./static/img/ui/qrcode/clientservice.png">
+                    <p>微信公众号</p>
+                    <p>当记造型</p>
+                </div>
+                <div class="channels">
+                    <a class="active icon iconfont icon-phono"></a>
+                    <a class="icon iconfont icon-wechat" data-target="msgPop-qr-pub"></a>
+                    <a class="icon iconfont icon-qq" data-target="msgPop-cs" style="font-size: 1.6rem"></a>
+                    <a class="icon iconfont icon-weibo" data-target="msgPop-qr-weibo"></a>
+                </div>
             </div>
         </div>
         <nav>
             <div id="navFrame">
                 <ul id="navList">
-                    <li><a class="active">首页</a></li>
-                    <li><a>ABOUT</a></li>
-                    <li><a>MAKEUP</a></li>
-                    <li><a>MANICURE</a></li>
-                    <li><a>WORKS</a></li>
-                    <li><a>TEACHER</a></li>
-                    <li><a>STARS</a></li>
-                    <li><a>CONTACT</a></li>
+                    <li><a class="active"><span class="en">HOME</span><span class="cn">主页</span></a></li>
+                    <li><a><span class="en">ABOUT</span><span class="cn">工作室简介</span></a></li>
+                    <li><a><span class="en">MAKEUP</span><span class="cn">化妆课程</span></a></li>
+                    <li><a><span class="en">MANICURE</span><span class="cn">美甲课程</span></a></li>
+                    <li><a><span class="en">WORKS</span><span class="cn">学员作品</span></a></li>
+                    <li><a><span class="en">TEACHER</span><span class="cn">师资力量</span></a></li>
+                    <li><a><span class="en">STARS</span><span class="cn">合作明星</span></a></li>
+                    <li><a><span class="en">CONTACT</span><span class="cn">联系方式</span></a></li>
                 </ul>
             </div>
         </nav>

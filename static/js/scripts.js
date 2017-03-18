@@ -35,16 +35,19 @@ $(document).ready(function () {
             index = 0 ;
         }
     },5000);
-    $body.delegate("#link-qq","mouseenter",function (e) {
+
+    //顶部事件
+    $body.delegate(".icon","click",function (e) {
         e.stopPropagation();
-        $contactFrame.css({
-            left:0,
-            opacity:1
-        })
+        var $target = $(e.target);
+        var target = $target.attr("data-target");
+        if(target){
+            $(".msgPop").removeClass("msgPopActive");
+            $("#"+target).addClass("msgPopActive");
+        }
+    }).delegate(".msgPop","click",function (e) {
+        e.stopPropagation()
     }).click(function () {
-        $contactFrame.css({
-            left:'-1rem',
-            opacity:0
-        })
+        $(".msgPop").removeClass("msgPopActive");
     })
 });
