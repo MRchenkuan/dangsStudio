@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>当记造型</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <link href="static/css/style.css" rel="stylesheet">
+    <link href="static/css/imagePlayer.css" rel="stylesheet">
+    <script src="static/js/jq.js"></script>
+    <style>
+        #content{
+            width: 100%;overflow: hidden
+        }
+        #content .lineFrame{
+            height: 41.8rem;
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+        }
+        #content .lineFrame .lineblock{
+            padding: 7rem 0;
+            margin: 0 auto;
+            width: 83.3rem;
+            height: 100%;
+        }
+        #content .lineFrame .lineblock .lineCell{
+            width: 21.8rem;
+            margin-left: 8.8rem;
+            height: 100%;
+            border:1px solid #ccc;
+            box-sizing:border-box;
+            float: left;
+        }
+        #content .lineFrame .lineblock .lineCell:nth-child(1){
+            margin-left:0;
+        }
+        #content .lineFrame .lineblock .lineCell .face{
+            height: 21.8rem;
+            background-position: center center;
+            background-size: 100% 100%;
+        }
+        #content .lineFrame .lineblock .lineCell .textBox{
+            height: 6rem;
+            padding: 2rem 1rem 1rem;
+            font-size: 1.2rem;
+            position: relative;
+        }
+        #content .lineFrame .lineblock .lineCell .textBox .name{
+            position: absolute;
+            bottom: 1.2rem;
+            left: 1.2rem;
+        }
+        #content .lineFrame .lineblock .lineCell .textBox .more{
+            color:#e53d61;
+            position: absolute;
+            bottom: 1.2rem;
+            right: 1.2rem;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <img id="leafTopLeft" class="leaf" draggable="false" src="./static/img/ui/leafTopLeft.png">
+        <img id="leafTopRight" class="leaf" draggable="false" src="./static/img/ui/leafTopRight.png">
+        <div id="slogan">
+            <img id="logo" src="./static/img/ui/logo.png">
+            <div class="left">
+                <p class="sorry">Sorry!</p>
+                <p>对不起！我们不是流水线培训</p>
+                <p>我们只专注于小班制教育</p>
+            </div>
+            <div class="right">
+                <div class="phone-num">
+                    <span>报名电话</span>
+                    <p>0731-88925003</p>
+                </div>
+                <div id="msgPop-cs" class="msgPop">
+                    <p><span class="avt iconfont icon-qq"></span>当记造型客服</p>
+                    <p><span class="avt iconfont icon-qq"></span>当记造型客服</p>
+                    <p><span class="avt iconfont icon-qq"></span>当记造型客服</p>
+                </div>
+                <div id="msgPop-qr-weibo"  class="msgPop">
+                    <img src="./static/img/ui/qrcode/pub.png">
+                    <p>新浪微博号</p>
+                    <p><a target="_blank" href="http://weibo.com/dangjistudio">@当记造型</a></p>
+                </div>
+                <div id="msgPop-qr-pub" class="msgPop">
+                    <img src="./static/img/ui/qrcode/clientservice.png">
+                    <p>微信公众号</p>
+                    <p>当记造型</p>
+                </div>
+                <div class="channels">
+                    <a class="active icon iconfont icon-phono"></a>
+                    <a class="icon iconfont icon-wechat" data-target="msgPop-qr-pub"></a>
+                    <a class="icon iconfont icon-qq" data-target="msgPop-cs" style="font-size: 1.6rem"></a>
+                    <a class="icon iconfont icon-weibo" data-target="msgPop-qr-weibo"></a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div id="navFrame">
+                <ul id="navList">
+                    <li><a><span class="en">HOME</span><span class="cn">主页</span></a></li>
+                    <li><a><span class="en">ABOUT</span><span class="cn">工作室简介</span></a></li>
+                    <li><a><span class="en">MAKEUP</span><span class="cn">化妆课程</span></a></li>
+                    <li><a><span class="en">MANICURE</span><span class="cn">美甲课程</span></a></li>
+                    <li><a><span class="en">WORKS</span><span class="cn">学员作品</span></a></li>
+                    <li><a><span class="en">TEACHER</span><span class="cn">师资力量</span></a></li>
+                    <li><a class="active"><span class="en">STARS</span><span class="cn">合作明星</span></a></li>
+                    <li><a><span class="en">CONTACT</span><span class="cn">联系方式</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="content">
+        <div class="lineFrame">
+            <div class="lineblock">
+                <div class="lineCell">
+                    <div class="face" style="background-image: url('./static/img/resource/starts/langlang.png')"></div>
+                    <div class="textBox">
+                        <span class="name">郎朗</span>
+                        <span class="more">More</span>
+                    </div>
+                </div>
+                <div class="lineCell">
+                    <div class="face"  style="background-image: url('./static/img/resource/starts/wanghan.png')"></div>
+                    <div class="textBox">
+                        <span class="name">汪涵</span>
+                        <span class="more">More</span>
+                    </div>
+                </div>
+                <div class="lineCell">
+                    <div class="face"  style="background-image: url('./static/img/resource/starts/caiguoqin.png')"></div>
+                    <div class="textBox">
+                        <span class="name">蔡国庆</span>
+                        <span class="more">More</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lineFrame">
+            <div class="lineblock">
+                <div class="lineCell">
+                    <div class="face" style="background-image: url('./static/img/resource/starts/langlang.png')"></div>
+                    <div class="textBox">
+                        <span class="name">郎朗</span>
+                        <span class="more">More</span>
+                    </div>
+                </div>
+                <div class="lineCell">
+                    <div class="face"  style="background-image: url('./static/img/resource/starts/wanghan.png')"></div>
+                    <div class="textBox">
+                        <span class="name">汪涵</span>
+                        <span class="more">More</span>
+                    </div>
+                </div>
+                <div class="lineCell">
+                    <div class="face"  style="background-image: url('./static/img/resource/starts/caiguoqin.png')"></div>
+                    <div class="textBox">
+                        <span class="name">蔡国庆</span>
+                        <span class="more">More</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lineFrame">
+            <div class="lineblock">
+                <div class="lineCell">
+                    <div class="face" style="background-image: url('./static/img/resource/starts/langlang.png')"></div>
+                    <div class="textBox">
+                        <span class="name">郎朗</span>
+                        <span class="more">More</span>
+                    </div>
+                </div>
+                <div class="lineCell">
+                    <div class="face"  style="background-image: url('./static/img/resource/starts/wanghan.png')"></div>
+                    <div class="textBox">
+                        <span class="name">汪涵</span>
+                        <span class="more">More</span>
+                    </div>
+                </div>
+                <div class="lineCell">
+                    <div class="face"  style="background-image: url('./static/img/resource/starts/caiguoqin.png')"></div>
+                    <div class="textBox">
+                        <span class="name">蔡国庆</span>
+                        <span class="more">More</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="foot">
+        <img id="leafBottomLeft" class="leaf" draggable="false" src="./static/img/ui/leafBottomLeft.png">
+        <img id="leafBottomRight" class="leaf" draggable="false" src="./static/img/ui/leafBottomRight.png">
+        <div class="content">
+            <div class="one">
+                <span>报名电话</span>
+                <p><span class="pink-phone">0731-88925003</span></p>
+                <p style="line-height:1.75rem;margin-top: .5rem;">地址：湖南省长沙市芙蓉区芙蓉中路二段98号明城国际中心617-619室</p>
+            </div>
+            <div class="two">
+                <p>联系电话：0731-88925003</p>
+                <p>客服微信号：dangjizaoxing</p>
+                <p>微信公众号：当记造型</p>
+                <p>新浪微博号：@当记造型</p>
+            </div>
+            <div class="three">
+                <div class="qr qr-1">
+                    <img src="./static/img/ui/qrcode/pub.png">
+                    <p>公众号二维码</p>
+                </div>
+                <div class="qr qr-2">
+                    <img src="./static/img/ui/qrcode/clientservice.png">
+                    <p>客服二维码</p>
+                </div>
+                <div class="qr qr-3">
+                    <img src="./static/img/ui/qrcode/recur.png">
+                    <p>招生二维码</p>
+                </div>
+            </div>
+            <div class="four">
+                <img src="./static/img/ui/join.png">
+            </div>
+        </div>
+    </div>
+    <div id="tail">
+        <p>©️ 2015 特赞 沪ICP备123213213号</p>
+    </div>
+</body>
+<script src="./static/js/common.js"></script>
+</html>
