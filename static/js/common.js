@@ -30,18 +30,17 @@ $body.delegate(".icon","click",function (e) {
 // 导航条链接
 var navLinks = [
     './index.html',
-    "",
-    "",
-    "",
-    "",
-    "",
+    "#",
+    "#",
+    "#",
+    "#",
+    "#",
     "./corperation.html",
-    ""
+    "#"
 ];
 $navList.find('a').each(function (id,it){
     var _class= it.getAttribute("class");
     if(!_class || _class.indexOf("active")<0){
         it.setAttribute("href",navLinks[id]);
-        console.log(it,navLinks[id])
     }
 });
