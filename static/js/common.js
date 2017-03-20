@@ -6,6 +6,10 @@ var $window = $(window);
 var $shader = $("#shader");
 var $navList = $("#navList");
 var _scrollCount= 0;
+
+if(location.hash.indexOf("#nosdr")>=0){
+    $shader.hide()
+}
 $window.scroll(function (e) {
     if(_scrollCount++ >3)$shader.fadeOut(1000);
 });
@@ -29,7 +33,7 @@ $body.delegate(".icon","click",function (e) {
 
 // 导航条链接
 var navLinks = [
-    './index.html',
+    './index.html#nosdr',
     "#",
     "#",
     "#",
