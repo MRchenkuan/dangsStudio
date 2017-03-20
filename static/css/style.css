@@ -15,7 +15,11 @@ body {
 
 #head {
   height: 11.5rem;
-  position: relative; }
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  z-index: 99; }
 @keyframes wave-left {
   0% {
     transform: rotate(-1deg); }
@@ -228,11 +232,16 @@ body {
                 display: inline; }
 
 #neck {
-  height: 41.5rem; }
+  top: 11.5rem;
+  height: 50rem;
+  width: 100%;
+  position: fixed;
+  z-index: -1; }
 
 #body {
   height: 31.6rem;
-  background-color: #fdf2f2; }
+  background-color: #fdf2f2;
+  margin-top: 61.5rem; }
 @keyframes wave-mid {
   0% {
     transform: scaleY(1) scaleX(1); }
@@ -244,7 +253,8 @@ body {
     height: 100%;
     width: 84rem;
     margin: 0 auto;
-    padding: 5.1rem 0 2.6rem 0; }
+    padding: 5.1rem 0 2.6rem 0;
+    transition: 1s transform ease; }
     #body .imgFrame .headImgBox {
       position: relative;
       width: 25%;

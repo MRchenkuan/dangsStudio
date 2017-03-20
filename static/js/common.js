@@ -2,6 +2,8 @@
  * Created by chenkuan on 2017/3/19.
  */
 var $body = $("body");
+var $neck = $("#neck");
+var $imgFrame = $body.find(".imgFrame").eq(0);
 var $window = $(window);
 var $shader = $("#shader");
 var $navList = $("#navList");
@@ -11,6 +13,21 @@ if(location.hash.indexOf("#nosdr")>=0){
     $shader.hide()
 }
 $window.scroll(function (e) {
+    $neck.css({
+        transform:"translateY(-"+$window.scrollTop()/3+"px)"
+    });
+
+    if($imgFrame.length>0){
+        if(($window.scrollTop()+$(window).height()/3) >= $imgFrame.position().top){
+            $imgFrame.css({
+                transform: "translateY(0px)"
+            })
+        }else{
+            $imgFrame.css({
+                transform: "translateY(30px)"
+            })
+        }
+    }
     if(_scrollCount++ >3)$shader.fadeOut(1000);
 });
 $body.delegate('#shader',"click",function () {
