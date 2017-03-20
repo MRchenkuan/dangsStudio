@@ -51,10 +51,10 @@ $body.delegate(".icon","click",function (e) {
 // 导航条链接
 var navLinks = [
     './index.html#nosdr',
+    "./about.html",
+    "./makeup.html",
     "#",
-    "#",
-    "#",
-    "#",
+    "./works.html",
     "#",
     "./corperation.html",
     "#"

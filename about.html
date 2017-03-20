@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>当记造型 - 合作明星</title>
+    <title>当记造型 - 工作室简介</title>
     <meta name="viewport" content="width=device-width, initial-scale=0">
     <link href="static/css/style.css" rel="stylesheet">
     <link href="static/css/imagePlayer.css" rel="stylesheet">
@@ -23,43 +23,37 @@
             width: 83.3rem;
             height: 100%;
         }
-        #content .lineFrame .lineblock .lineCell{
-            width: 21.8rem;
-            margin-left: 8.8rem;
+        #content .lineFrame .lineblock .left{
+            width: 50%;
             height: 100%;
-            border:1px solid #ccc;
-            box-sizing:border-box;
-            float: left;
-            transition:.3s ease all
-        }
-        .lineCell:hover{
-            box-shadow: 0 0 5px grey;
-        }
-        #content .lineFrame .lineblock .lineCell:nth-child(1){
-            margin-left:0;
-        }
-        #content .lineFrame .lineblock .lineCell .face{
-            height: 21.8rem;
-            background-position: center center;
-            background-size: 100% 100%;
-        }
-        #content .lineFrame .lineblock .lineCell .textBox{
-            height: 6rem;
-            padding: 2rem 1rem 1rem;
-            font-size: 1.2rem;
             position: relative;
+            float: left;
+            padding-right: 5.6rem;
+            text-align: justify;
         }
-        #content .lineFrame .lineblock .lineCell .textBox .name{
+        #content .lineFrame .lineblock .right{
+            width: 50%;
+            float: right;
+        }
+        #content .lineFrame .lineblock .more{
             position: absolute;
-            bottom: 1.2rem;
-            left: 1.2rem;
-        }
-        #content .lineFrame .lineblock .lineCell .textBox .more{
             color:#e53d61;
-            position: absolute;
-            bottom: 1.2rem;
-            right: 1.2rem;
+            left: 0;
+            bottom: 0;
             text-decoration: underline;
+            font-size: 1.2rem;
+        }
+        #content .lineFrame .lineblock .right img{
+            width: 100%;
+        }
+        #content .lineFrame .lineblock .left .title{
+            font-family: 'sorry';
+            font-size: 3rem;
+            transform: scaleY(0.8);
+        }
+        #content .lineFrame .lineblock .left p{
+            line-height: 2;
+            font-size: 1.2rem;
         }
 
     </style>
@@ -107,12 +101,12 @@
             <div id="navFrame">
                 <ul id="navList">
                     <li><a><span class="en">HOME</span><span class="cn">主页</span></a></li>
-                    <li><a><span class="en">ABOUT</span><span class="cn">工作室简介</span></a></li>
+                    <li><a class="active"><span class="en">ABOUT</span><span class="cn">工作室简介</span></a></li>
                     <li><a><span class="en">MAKEUP</span><span class="cn">化妆课程</span></a></li>
                     <li><a><span class="en">MANICURE</span><span class="cn">美甲课程</span></a></li>
                     <li><a><span class="en">WORKS</span><span class="cn">学员作品</span></a></li>
                     <li><a><span class="en">TEACHER</span><span class="cn">师资力量</span></a></li>
-                    <li><a class="active"><span class="en">STARS</span><span class="cn">合作明星</span></a></li>
+                    <li><a><span class="en">STARS</span><span class="cn">合作明星</span></a></li>
                     <li><a><span class="en">CONTACT</span><span class="cn">联系方式</span></a></li>
                 </ul>
             </div>
@@ -121,76 +115,49 @@
     <div id="content">
         <div class="lineFrame">
             <div class="lineblock">
-                <div class="lineCell">
-                    <div class="face" style="background-image: url('./static/img/resource/starts/langlang.png')"></div>
-                    <div class="textBox">
-                        <span class="name">郎朗</span>
-                        <span class="more">More</span>
-                    </div>
+                <div class="left">
+                    <p class="title">Introduce</p>
+                    <p>当记简介</p>
+                    <p>《爸爸去哪4》官方唯一合作造型机构<br>
+                        湖南地区合作明星艺人最多造型机构<br>
+                        彩妆造型教学机构，已开设周末白领班与全天专业班<br>
+                        新娘新郎婚礼跟妆机构，目前已为上千位新人提供婚礼跟妆服务<br>
+                        服务地区遍及国内外。<br>
+                    </p>
+                    <span class="more">工作室环境</span>
                 </div>
-                <div class="lineCell">
-                    <div class="face"  style="background-image: url('./static/img/resource/starts/wanghan.png')"></div>
-                    <div class="textBox">
-                        <span class="name">汪涵</span>
-                        <span class="more">More</span>
-                    </div>
-                </div>
-                <div class="lineCell">
-                    <div class="face"  style="background-image: url('./static/img/resource/starts/caiguoqin.png')"></div>
-                    <div class="textBox">
-                        <span class="name">蔡国庆</span>
-                        <span class="more">More</span>
-                    </div>
+                <div class="right">
+                    <img src="./static/img/resource/about/1.png">
                 </div>
             </div>
         </div>
         <div class="lineFrame">
             <div class="lineblock">
-                <div class="lineCell">
-                    <div class="face" style="background-image: url('./static/img/resource/starts/langlang.png')"></div>
-                    <div class="textBox">
-                        <span class="name">郎朗</span>
-                        <span class="more">More</span>
-                    </div>
+                <div class="left">
+                    <p class="title">Cooperation</p>
+                    <p>合作艺人</p>
+                    <p>
+                        佟大为 echo乐团  陈为民 陈浩民 邓伦 范世琦 郭晓敏 高昊 高怡平 黄维德 何炅 黄子佼 胡杏儿 居来提 贾一平 姜雨辰 林保怡 刘娜 黎明 李湘 李晨 李立 李灿森 李静 李承铉 李好 李锐 李响 李维嘉 李晓川 李杨 李艾 陆虎 陆立 刘刚 马德钟 梅东 明道 马可 彭宇 秦岚 区俊涛 任达华 任青 汤唯 孙国庆 孙红雷 孙骁骁 孙楠 谭维维 汪涵 王学兵 王缇 王宝强 魏泽浩 万茜 沈凌 徐睿 杨乐乐 YOYO 余少群 于朦胧 于洋 谢依霖 中泉英雄 周显欣 紫薇 张晓晨 赵文瑄
+                    </p>
+                    <span class="more">More</span>
                 </div>
-                <div class="lineCell">
-                    <div class="face"  style="background-image: url('./static/img/resource/starts/wanghan.png')"></div>
-                    <div class="textBox">
-                        <span class="name">汪涵</span>
-                        <span class="more">More</span>
-                    </div>
-                </div>
-                <div class="lineCell">
-                    <div class="face"  style="background-image: url('./static/img/resource/starts/caiguoqin.png')"></div>
-                    <div class="textBox">
-                        <span class="name">蔡国庆</span>
-                        <span class="more">More</span>
-                    </div>
+                <div class="right">
+                    <img src="./static/img/resource/about/3.png">
                 </div>
             </div>
         </div>
         <div class="lineFrame">
             <div class="lineblock">
-                <div class="lineCell">
-                    <div class="face" style="background-image: url('./static/img/resource/starts/langlang.png')"></div>
-                    <div class="textBox">
-                        <span class="name">郎朗</span>
-                        <span class="more">More</span>
-                    </div>
+                <div class="left">
+                    <p class="title">Media</p>
+                    <p>合作媒体</p>
+                    <p>
+                        湖南卫视 江苏卫视 浙江卫视 贵州卫视 北京卫视 安徽卫视 天津卫视 湖南经视 湖南娱乐频道 湖南潇湘电影频道 金鹰卡通 天娱传媒 快乐购 金鹰网 金鹰报 尊品杂志 纽扣杂志
+                    </p>
+                    <span class="more">More</span>
                 </div>
-                <div class="lineCell">
-                    <div class="face"  style="background-image: url('./static/img/resource/starts/wanghan.png')"></div>
-                    <div class="textBox">
-                        <span class="name">汪涵</span>
-                        <span class="more">More</span>
-                    </div>
-                </div>
-                <div class="lineCell">
-                    <div class="face"  style="background-image: url('./static/img/resource/starts/caiguoqin.png')"></div>
-                    <div class="textBox">
-                        <span class="name">蔡国庆</span>
-                        <span class="more">More</span>
-                    </div>
+                <div class="right">
+                    <img src="./static/img/resource/about/2.png">
                 </div>
             </div>
         </div>

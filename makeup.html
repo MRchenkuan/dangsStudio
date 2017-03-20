@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>当记造型 - 合作明星</title>
+    <title>当记造型 - 化妆课程</title>
     <meta name="viewport" content="width=device-width, initial-scale=0">
     <link href="static/css/style.css" rel="stylesheet">
     <link href="static/css/imagePlayer.css" rel="stylesheet">
@@ -23,43 +23,43 @@
             width: 83.3rem;
             height: 100%;
         }
-        #content .lineFrame .lineblock .lineCell{
-            width: 21.8rem;
-            margin-left: 8.8rem;
+        #content .lineFrame .lineblock .left{
+            width: 50%;
             height: 100%;
-            border:1px solid #ccc;
-            box-sizing:border-box;
-            float: left;
-            transition:.3s ease all
-        }
-        .lineCell:hover{
-            box-shadow: 0 0 5px grey;
-        }
-        #content .lineFrame .lineblock .lineCell:nth-child(1){
-            margin-left:0;
-        }
-        #content .lineFrame .lineblock .lineCell .face{
-            height: 21.8rem;
-            background-position: center center;
-            background-size: 100% 100%;
-        }
-        #content .lineFrame .lineblock .lineCell .textBox{
-            height: 6rem;
-            padding: 2rem 1rem 1rem;
-            font-size: 1.2rem;
             position: relative;
+            float: left;
+            padding-right: 5.6rem;
+            text-align: justify;
         }
-        #content .lineFrame .lineblock .lineCell .textBox .name{
+        #content .lineFrame .lineblock .left .subtitle{
+            font-size: 2rem;
+            transform: scaleY(1);
+            line-height: 1;
+            margin-bottom: 3rem;
+        }
+        #content .lineFrame .lineblock .right{
+            width: 50%;
+            float: right;
+        }
+        #content .lineFrame .lineblock .more{
             position: absolute;
-            bottom: 1.2rem;
-            left: 1.2rem;
-        }
-        #content .lineFrame .lineblock .lineCell .textBox .more{
             color:#e53d61;
-            position: absolute;
-            bottom: 1.2rem;
-            right: 1.2rem;
+            left: 0;
+            bottom: 0;
             text-decoration: underline;
+            font-size: 1.2rem;
+        }
+        #content .lineFrame .lineblock .right img{
+            width: 100%;
+        }
+        #content .lineFrame .lineblock .left .title{
+            font-family: 'sorry';
+            font-size: 3rem;
+            transform: scaleY(0.8);
+        }
+        #content .lineFrame .lineblock .left p{
+            line-height: 2;
+            font-size: 1.2rem;
         }
 
     </style>
@@ -108,11 +108,11 @@
                 <ul id="navList">
                     <li><a><span class="en">HOME</span><span class="cn">主页</span></a></li>
                     <li><a><span class="en">ABOUT</span><span class="cn">工作室简介</span></a></li>
-                    <li><a><span class="en">MAKEUP</span><span class="cn">化妆课程</span></a></li>
+                    <li><a class="active"><span class="en">MAKEUP</span><span class="cn">化妆课程</span></a></li>
                     <li><a><span class="en">MANICURE</span><span class="cn">美甲课程</span></a></li>
                     <li><a><span class="en">WORKS</span><span class="cn">学员作品</span></a></li>
                     <li><a><span class="en">TEACHER</span><span class="cn">师资力量</span></a></li>
-                    <li><a class="active"><span class="en">STARS</span><span class="cn">合作明星</span></a></li>
+                    <li><a><span class="en">STARS</span><span class="cn">合作明星</span></a></li>
                     <li><a><span class="en">CONTACT</span><span class="cn">联系方式</span></a></li>
                 </ul>
             </div>
@@ -121,76 +121,75 @@
     <div id="content">
         <div class="lineFrame">
             <div class="lineblock">
-                <div class="lineCell">
-                    <div class="face" style="background-image: url('./static/img/resource/starts/langlang.png')"></div>
-                    <div class="textBox">
-                        <span class="name">郎朗</span>
-                        <span class="more">More</span>
-                    </div>
+                <div class="left">
+                    <p class="title">Widding</p>
+                    <p class="subtitle">零基础新娘妆发班</p>
+                    <p>
+                        想从事 “时尚 高新 自由”的化妆工作，在就业创业道路走在最前沿。服装服饰、美容美发、形象设计、舞台舞美、化妆摄影、时尚买手等行业从业者或志愿入行者，希望通过技术嫁接，带来独特行业竞争力的人。一切崇尚美，希望借助形象设计技术提升自身形象的时尚人士。
+                    </p>
+                    <span class="more">
+                        <p>课程现场展示</p>
+                        <p><span style="margin-right: 1rem">零基础新娘化妆造型班</span><span>零基础新娘化妆造型班</span></p>
+                    </span>
                 </div>
-                <div class="lineCell">
-                    <div class="face"  style="background-image: url('./static/img/resource/starts/wanghan.png')"></div>
-                    <div class="textBox">
-                        <span class="name">汪涵</span>
-                        <span class="more">More</span>
-                    </div>
+                <div class="right">
+                    <img src="./static/img/resource/makeup/1.png">
                 </div>
-                <div class="lineCell">
-                    <div class="face"  style="background-image: url('./static/img/resource/starts/caiguoqin.png')"></div>
-                    <div class="textBox">
-                        <span class="name">蔡国庆</span>
-                        <span class="more">More</span>
-                    </div>
+            </div>
+        </div>
+
+        <div class="lineFrame">
+            <div class="lineblock">
+                <div class="left">
+                    <p class="title">VIP for white collar</p>
+                    <p class="subtitle">vip白领班</p>
+                    <p>
+                        零基础学员，让您找到属于自己的美丽与魅力 、找准自己适合的色彩、服装款、配饰。妆面 与发型服饰的完美搭配。针对不同的场合不同着装，让你在生活中与众不同。美丽出彩！
+                    </p>
+                    <span class="more">
+                        <p>课程现场展示</p>
+                        <p><span style="margin-right: 1rem">至尊VIP白领班一对一</span><span>VIP白领班</span></p>
+                    </span>
+                </div>
+                <div class="right">
+                    <img src="./static/img/resource/makeup/2.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="lineFrame">
+            <div class="lineblock">
+                <div class="left">
+                    <p class="title">Korean course</p>
+                    <p class="subtitle">韩式半永久纹绣课程</p>
+                    <p>
+                        20%理论，80%实操，一对一辅导，包学、包会、包实习、一对一帮助开店创业指导，直到满意为止。终身免费复修，全程跟踪指导，扶持学员创业开店，落地推广。针对上学，上班没有时间的学生可单独开设
+                    </p>
+                    <span class="more">
+                        <p>课程现场展示</p>
+                        <p><span style="margin-right: 1rem">韩式半永久课程</span></p>
+                    </span>
+                </div>
+                <div class="right">
+                    <img src="./static/img/resource/makeup/3.png">
                 </div>
             </div>
         </div>
         <div class="lineFrame">
             <div class="lineblock">
-                <div class="lineCell">
-                    <div class="face" style="background-image: url('./static/img/resource/starts/langlang.png')"></div>
-                    <div class="textBox">
-                        <span class="name">郎朗</span>
-                        <span class="more">More</span>
-                    </div>
+                <div class="left">
+                    <p class="title">Japanese manicure</p>
+                    <p class="subtitle">日系美甲班</p>
+                    <p>
+                        20%理论，80%实操，一对一辅导，包学、包会、包实习、一对一帮助开店创业指导，直到满意为止。终身免费复修，全程跟踪指导，扶持学员创业开店，落地推广。针对上学，上班没有时间的学生可单独开设晚间班和周末班。
+                    </p>
+                    <span class="more">
+                        <p>课程现场展示</p>
+                        <p><span style="margin-right: 1rem">日系美甲班</span><span>VIP基础美甲班</span></p>
+                    </span>
                 </div>
-                <div class="lineCell">
-                    <div class="face"  style="background-image: url('./static/img/resource/starts/wanghan.png')"></div>
-                    <div class="textBox">
-                        <span class="name">汪涵</span>
-                        <span class="more">More</span>
-                    </div>
-                </div>
-                <div class="lineCell">
-                    <div class="face"  style="background-image: url('./static/img/resource/starts/caiguoqin.png')"></div>
-                    <div class="textBox">
-                        <span class="name">蔡国庆</span>
-                        <span class="more">More</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="lineFrame">
-            <div class="lineblock">
-                <div class="lineCell">
-                    <div class="face" style="background-image: url('./static/img/resource/starts/langlang.png')"></div>
-                    <div class="textBox">
-                        <span class="name">郎朗</span>
-                        <span class="more">More</span>
-                    </div>
-                </div>
-                <div class="lineCell">
-                    <div class="face"  style="background-image: url('./static/img/resource/starts/wanghan.png')"></div>
-                    <div class="textBox">
-                        <span class="name">汪涵</span>
-                        <span class="more">More</span>
-                    </div>
-                </div>
-                <div class="lineCell">
-                    <div class="face"  style="background-image: url('./static/img/resource/starts/caiguoqin.png')"></div>
-                    <div class="textBox">
-                        <span class="name">蔡国庆</span>
-                        <span class="more">More</span>
-                    </div>
+                <div class="right">
+                    <img src="./static/img/resource/makeup/4.png">
                 </div>
             </div>
         </div>
