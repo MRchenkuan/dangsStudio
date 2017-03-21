@@ -55,9 +55,9 @@ var navLinks = [
     "./makeup.html",
     "#",
     "./works.html",
-    "#",
+    "./teachers.html",
     "./corperation.html",
-    "#"
+    "./contact.html"
 ];
 $navList.find('a').each(function (id,it){
     var _class= it.getAttribute("class");
