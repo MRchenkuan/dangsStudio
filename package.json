@@ -2,6 +2,7 @@
   "name": "application-name",
   "version": "0.0.1",
   "scripts": {
-    "sass":"sass --watch static/css/style.scss:static/css/style.css"
+    "sass":"sass --watch static/css/style.scss:static/css/style.css",
+    "font-spider":"font-spider ./*.html"
   }
 }

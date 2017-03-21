@@ -18,13 +18,13 @@ $window.scroll(function (e) {
     });
 
     if($imgFrame.length>0){
-        if(($window.scrollTop()+$(window).height()/3) >= $imgFrame.position().top){
+        if(($window.scrollTop()+$(window).height()/1.5) >= $imgFrame.position().top){
             $imgFrame.css({
                 transform: "translateY(0px)"
             })
         }else{
             $imgFrame.css({
-                transform: "translateY(30px)"
+                transform: "translateY(50px)"
             })
         }
     }

@@ -237,8 +237,8 @@ body{
             .en{display: inline}
             .cn{display: none}
             &:hover,&.active{
-              color: #e53d61;
-              text-shadow: 0 0 25px #e53d61;
+              color: #fd5b89;
+              text-shadow: 0 0 25px #fd5b89;
               .en{display: none}
               .cn{display: inline}
             }
@@ -255,15 +255,15 @@ body{
 }
 #neck{
   top: 11.5rem;
-  height: 50rem;
+  height: 60rem;
   width: 100%;
   position: fixed;
   z-index: -1;
 }
 #body{
-  height: 31.6rem;
+  height: 41.3rem;
   background-color: #fdf2f2;
-  margin-top: 61.5rem;
+  margin-top: 71.5rem;
   @keyframes wave-mid {
     0%{transform: scaleY(1) scaleX(1);}
     50%{transform: scaleY(.95) scaleX(1.02);}
@@ -276,7 +276,7 @@ body{
     height: 100%;
     width: 84rem;
     margin: 0 auto;
-    padding: 5.1rem 0 2.6rem 0;
+    padding: 8.1rem 0 2.6rem 0;
     transition: 1s transform ease;
     //border: 1px solid grey;
     .headImgBox{
@@ -291,7 +291,7 @@ body{
       box-sizing: border-box;
       float: left;
       &:hover .headImg{
-        box-shadow: 0 0 20px -3px #e53d61;
+        box-shadow: 0 0 20px -3px #fd5b89;
       }
       .headImg{
 
@@ -331,7 +331,7 @@ body{
   }
 }
 #foot{
-  height: 19.8rem;
+  height: 24.8rem;
   background-color: #4b4b57;
   position: relative;
   @keyframes wave-left {
@@ -369,7 +369,7 @@ body{
       text-shadow: 0 1px #000;
       width: 25%;
       float: left;
-      margin: 6.4rem 3.8rem 0 0;
+      margin: 8rem 3.8rem 0 0;
       padding-right: 3.8rem;
       border-right: 1px solid;
       .pink-phone{
@@ -388,7 +388,7 @@ body{
       line-height: 2.1rem;
     }
     .three{
-      margin: 6.4rem 3.8rem 0 0;
+      margin: 8rem 3.8rem 0 0;
       float: left;
       .qr{
         width: 6.5rem;
@@ -408,7 +408,7 @@ body{
       }
     }
     .four{
-      margin: 3.8rem 0 0 0;
+      margin: 5.6rem 0 0 0;
       float: right;
       width: 9.5rem;
       img{
