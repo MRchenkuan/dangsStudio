@@ -8,6 +8,15 @@ var $window = $(window);
 var $shader = $("#shader");
 var $navList = $("#navList");
 var _scrollCount= 0;
+var $carouselFrame = $(".carouselFrame .carousel");
+var ar = (function () {
+    var _ar = [];
+    $carouselFrame.each(function (i,it) {
+        _ar.push($carouselFrame.eq(i))
+    });
+    return _ar;
+})();
+console.log(ar)
 
 if(location.hash.indexOf("#nosdr")>=0){
     $shader.hide()
@@ -17,17 +26,35 @@ $window.scroll(function (e) {
         transform:"translateY(-"+$window.scrollTop()/3+"px)"
     });
 
+    // 当前可视位置
+    var nowScrollPos = ($window.scrollTop()+$(window).height()/(2));
+    // 浮出动画
     if($imgFrame.length>0){
-        if(($window.scrollTop()+$(window).height()/1.5) >= $imgFrame.position().top){
+        if(nowScrollPos >= $imgFrame.position().top){
             $imgFrame.css({
                 transform: "translateY(0px)"
             })
         }else{
             $imgFrame.css({
-                transform: "translateY(50px)"
+                transform: "translateY(5rem)"
             })
         }
     }
+    // 浮出动画
+    ar.some(function ($it) {
+        if($carouselFrame.length>0){
+            if( nowScrollPos >= $it.position().top){
+                $it.css({
+                    transform: "translateY(0px)"
+                })
+            }else{
+                $it.css({
+                    transform: "translateY(5rem)"
+                })
+            }
+        }
+    });
+
     if(_scrollCount++ >3)$shader.fadeOut(1000);
 });
 $body.delegate('#shader',"click",function () {
