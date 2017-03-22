@@ -2,9 +2,20 @@
 @import url(font.css);
 @import url(../iconfonts/iconfont.css);
 html {
-  font-family: "Microsoft YaHei","Helvetica Neue", "Helvetica", "Arial", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  font-size: 12px; }
+  font-family: "Microsoft YaHei","Helvetica Neue", "Helvetica", "Arial", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; }
 
+@media (max-width: 767px) {
+  html {
+    font-size: 9px; } }
+@media (min-width: 768px) and (max-width: 1440px) {
+  html {
+    font-size: 12px; } }
+@media (min-width: 1441px) and (max-width: 1980px) {
+  html {
+    font-size: 14px; } }
+@media (min-width: 1980px) {
+  html {
+    font-size: 22px; } }
 div, nav, li {
   box-sizing: border-box; }
 
@@ -233,7 +244,7 @@ body {
 
 #neck {
   top: 11.5rem;
-  height: 60rem;
+  height: 45rem;
   width: 100%;
   position: fixed;
   z-index: -1; }
@@ -241,7 +252,7 @@ body {
 #body {
   height: 41.3rem;
   background-color: #fdf2f2;
-  margin-top: 71.5rem; }
+  margin-top: 56.5rem; }
 @keyframes wave-mid {
   0% {
     transform: scaleY(1) scaleX(1); }
@@ -350,6 +361,7 @@ body {
       border-right: 1px solid; }
       #foot .content .one .pink-phone, #foot .content .two .pink-phone {
         line-height: 3rem;
+        color: #fff;
         font-family: "big_noodle_titling";
         font-size: 2.5rem;
         margin-right: 1.5rem;
@@ -396,6 +408,7 @@ body {
 
 #shader {
   position: fixed;
+  cursor: pointer;
   top: 0%;
   right: 0%;
   left: 0;
@@ -409,49 +422,50 @@ body {
 .carouselFrame {
   height: 49.6rem;
   padding: 4.8rem 0; }
-  .carouselFrame .carousel {
-    transition: 1.5s transform ease;
-    width: 83.4rem;
-    height: 32.5rem;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative; }
-    .carouselFrame .carousel .pice {
-      background: no-repeat center;
-      background-size: 100% 100%;
-      height: 100%;
-      width: 100%;
-      position: absolute; }
-  .carouselFrame .carouselCtrl {
-    margin: 1rem auto 2rem;
-    height: 1rem; }
-    .carouselFrame .carouselCtrl li {
-      float: left;
-      padding: .25rem;
-      border-radius: .5rem;
-      list-style: none;
-      margin: 0 .25rem;
-      background-color: #aaa; }
-    .carouselFrame .carouselCtrl .active {
-      background-color: #d36d15; }
-  .carouselFrame .centerBtn {
-    height: 3.3rem;
-    width: 15.3rem;
-    border: 1px solid #000;
-    border-radius: 1rem;
-    margin: 0 auto;
-    line-height: 3.3rem;
-    text-align: center;
-    font-size: 1.5rem;
-    transition: all .5s ease;
-    cursor: pointer;
-    user-select: none; }
-    .carouselFrame .centerBtn:hover {
-      box-shadow: 0 0 5px #fd5b89;
-      border: 1px solid #fd5b89;
-      color: #fd5b89; }
-    .carouselFrame .centerBtn:active {
-      box-shadow: inset 0 0 2px #fd5b89;
-      border: 1px solid #fd5b89; }
+  .carouselFrame .carousel-group {
+    transition: 1.5s transform ease; }
+    .carouselFrame .carousel-group .carousel {
+      width: 83.4rem;
+      height: 32.5rem;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative; }
+      .carouselFrame .carousel-group .carousel .pice {
+        background: no-repeat center;
+        background-size: 100% 100%;
+        height: 100%;
+        width: 100%;
+        position: absolute; }
+    .carouselFrame .carousel-group .carouselCtrl {
+      margin: 1rem auto 2rem;
+      height: 1rem; }
+      .carouselFrame .carousel-group .carouselCtrl li {
+        float: left;
+        padding: .25rem;
+        border-radius: .5rem;
+        list-style: none;
+        margin: 0 .25rem;
+        background-color: #aaa; }
+      .carouselFrame .carousel-group .carouselCtrl .active {
+        background-color: #d36d15; }
+    .carouselFrame .carousel-group .centerBtn {
+      height: 3.3rem;
+      width: 15.3rem;
+      border: 1px solid #000;
+      border-radius: 1rem;
+      margin: 0 auto;
+      line-height: 3.3rem;
+      text-align: center;
+      font-size: 1.5rem;
+      transition: all .5s ease;
+      cursor: pointer;
+      user-select: none; }
+      .carouselFrame .carousel-group .centerBtn:hover {
+        box-shadow: 0 0 5px #fd5b89;
+        border: 1px solid #fd5b89;
+        color: #fd5b89; }
+      .carouselFrame .carousel-group .centerBtn:active {
+        box-shadow: inset 0 0 2px #fd5b89;
+        border: 1px solid #fd5b89; }
 
 /*# sourceMappingURL=style.css.map */

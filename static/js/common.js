@@ -8,7 +8,7 @@ var $window = $(window);
 var $shader = $("#shader");
 var $navList = $("#navList");
 var _scrollCount= 0;
-var $carouselFrame = $(".carouselFrame .carousel");
+var $carouselFrame = $(".carouselFrame .carousel-group");
 var ar = (function () {
     var _ar = [];
     $carouselFrame.each(function (i,it) {
@@ -16,12 +16,11 @@ var ar = (function () {
     });
     return _ar;
 })();
-console.log(ar)
 
 if(location.hash.indexOf("#nosdr")>=0){
     $shader.hide()
 }
-$window.scroll(function (e) {
+$(document).scroll(function (e) {
     $neck.css({
         transform:"translateY(-"+$window.scrollTop()/3+"px)"
     });
@@ -32,7 +31,7 @@ $window.scroll(function (e) {
     if($imgFrame.length>0){
         if(nowScrollPos >= $imgFrame.position().top){
             $imgFrame.css({
-                transform: "translateY(0px)"
+                transform: "translateY(0rem)"
             })
         }else{
             $imgFrame.css({
@@ -45,7 +44,7 @@ $window.scroll(function (e) {
         if($carouselFrame.length>0){
             if( nowScrollPos >= $it.position().top){
                 $it.css({
-                    transform: "translateY(0px)"
+                    transform: "translateY(0rem)"
                 })
             }else{
                 $it.css({
@@ -56,8 +55,7 @@ $window.scroll(function (e) {
     });
 
     if(_scrollCount++ >3)$shader.fadeOut(1000);
-});
-$body.delegate('#shader',"click",function () {
+}).delegate('#shader',"click",function () {
     $shader.fadeOut(1000);
 });
 //顶部事件

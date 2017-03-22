@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>当记造型 - 主页</title>
     <meta name="viewport" content="width=device-width, initial-scale=0">
+    <meta name = "format-detection" content="telephone = no" />
     <link href="static/css/style.css" rel="stylesheet">
     <link href="static/css/imagePlayer.css" rel="stylesheet">
     <script src="static/js/jq.js"></script>
@@ -62,7 +63,7 @@
             </div>
         </nav>
     </div>
-    <div id="neck" style="transform: translateY(0px)">
+    <div id="neck" style="transform: translateY(0)">
         <div id="imagePlayer">
             <div id="imageFrame">
                 <div class="pice" style='background: linear-gradient(to top right, #05A893, #00DAA5);'>
@@ -123,38 +124,42 @@
         </div>
     </div>
     <div id="body2" class="carouselFrame">
-        <div class="carousel">
-            <div class="pice" style="background-image: url('./static/img/resource/home/carousel1/1.jpg')"></div>
-            <div class="pice" style="background-image: url('./static/img/resource/home/carousel1/2.jpg')"></div>
-            <div class="pice" style="background-image: url('./static/img/resource/home/carousel1/3.jpg')"></div>
-            <div class="pice" style="background-image: url('./static/img/resource/home/carousel1/4.jpg')"></div>
-            <div class="pice" style="background-image: url('./static/img/resource/home/carousel1/5.jpg')"></div>
+        <div class="carousel-group">
+            <div class="carousel">
+                <div class="pice" style="background-image: url('./static/img/resource/home/carousel1/1.jpg')"></div>
+                <div class="pice" style="background-image: url('./static/img/resource/home/carousel1/2.jpg')"></div>
+                <div class="pice" style="background-image: url('./static/img/resource/home/carousel1/3.jpg')"></div>
+                <div class="pice" style="background-image: url('./static/img/resource/home/carousel1/4.jpg')"></div>
+                <div class="pice" style="background-image: url('./static/img/resource/home/carousel1/5.jpg')"></div>
+            </div>
+            <ul class="carouselCtrl" style="width: 5rem">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="centerBtn">作品展示</div>
         </div>
-        <ul class="carouselCtrl" style="width: 5rem">
-            <li class="active"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        <div class="centerBtn">作品展示</div>
     </div>
     <div id="body3" class="carouselFrame">
-        <div class="carousel">
-            <div class="pice" style="background-image: url('./static/img/resource/home/carousel2/1.jpg')"></div>
-            <div class="pice" style="background-image: url('./static/img/resource/home/carousel2/2.jpg')"></div>
-            <div class="pice" style="background-image: url('./static/img/resource/home/carousel2/3.jpg')"></div>
-            <div class="pice" style="background-image: url('./static/img/resource/home/carousel2/4.jpg')"></div>
-            <div class="pice" style="background-image: url('./static/img/resource/home/carousel2/5.jpg')"></div>
+        <div class="carousel-group">
+            <div class="carousel">
+                <div class="pice" style="background-image: url('./static/img/resource/home/carousel2/1.jpg')"></div>
+                <div class="pice" style="background-image: url('./static/img/resource/home/carousel2/2.jpg')"></div>
+                <div class="pice" style="background-image: url('./static/img/resource/home/carousel2/3.jpg')"></div>
+                <div class="pice" style="background-image: url('./static/img/resource/home/carousel2/4.jpg')"></div>
+                <div class="pice" style="background-image: url('./static/img/resource/home/carousel2/5.jpg')"></div>
+            </div>
+            <ul class="carouselCtrl" style="width: 5rem">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="centerBtn">精品教学</div>
         </div>
-        <ul class="carouselCtrl" style="width: 5rem">
-            <li class="active"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        <div class="centerBtn">精品教学</div>
     </div>
     <div id="foot">
         <img id="leafBottomLeft" class="leaf" draggable="false" src="./static/img/ui/leafBottomLeft.png">
